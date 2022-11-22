@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\LS.Application\LS.Application.csproj" />
+    <ProjectReference Include="..\..\Domain\LS.Domain.Core\LS.Domain.Core.csproj" />
+    <ProjectReference Include="..\LS.Infra.CrossCutting.Identity\LS.Infra.CrossCutting.Identity.csproj" />
+    <ProjectReference Include="..\LS.Infra.Data.Write\LS.Infra.Data.Write.csproj" />
+    <ProjectReference Include="..\LS.Infra.Data.Read\LS.Infra.Data.Read.csproj" />
+  </ItemGroup>
+
+</Project>

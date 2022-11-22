@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UserSecretsId>367b16bb-fed6-4d91-90a5-b56639ccb1e0</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..</DockerfileContext>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.31" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.31" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.31" />
+
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
+
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Domain\LS.Domain.Core\LS.Domain.Core.csproj" />
+		<ProjectReference Include="..\..\Domain\LS.Domain\LS.Domain.csproj" />
+		<ProjectReference Include="..\..\Infra\LS.Infra.CrossCutting.Identity\LS.Infra.CrossCutting.Identity.csproj" />
+		<ProjectReference Include="..\..\Infra\LS.Infra.Data.Write\LS.Infra.Data.Write.csproj" />
+		<ProjectReference Include="..\..\Infra\LS.Infra.IoC\LS.Infra.CrossCutting.IoC.csproj" />
+	</ItemGroup>
+
+
+</Project>

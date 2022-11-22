@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Bogus" Version="34.0.2" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+		<PackageReference Include="xunit" Version="2.4.0" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+		<PackageReference Include="coverlet.collector" Version="1.2.0" />
+		<PackageReference Include="Moq" Version="4.16.1" />
+		<PackageReference Include="Moq.AutoMock" Version="3.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\Application\LS.Application\LS.Application.csproj" />
+		<ProjectReference Include="..\..\src\Domain\LS.Domain.Core\LS.Domain.Core.csproj" />
+		<ProjectReference Include="..\..\src\Domain\LS.Domain\LS.Domain.csproj" />
+		<ProjectReference Include="..\..\src\WebApi\LS.WebApi\LS.WebApi.csproj" />
+	</ItemGroup>
+
+</Project>
