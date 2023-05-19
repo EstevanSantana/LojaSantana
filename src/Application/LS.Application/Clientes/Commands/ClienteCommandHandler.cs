@@ -7,6 +7,7 @@ using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace LS.Application.Clientes.Commands
 {
@@ -16,11 +17,13 @@ namespace LS.Application.Clientes.Commands
         IRequestHandler<CadastroClienteEnderecoCommand, ValidationResult>
 
     {
+        private readonly ILogger<ClienteCommandHandler> _logger;
         private readonly IClienteWriteRepository _clienteWriteRepository;
 
-        public ClienteCommandHandler(IClienteWriteRepository clienteWriteRepository)
+        public ClienteCommandHandler(IClienteWriteRepository clienteWriteRepository, ILogger<ClienteCommandHandler> logger)
         {
             _clienteWriteRepository = clienteWriteRepository;
+            _logger = logger;
         }
 
         public async Task<ValidationResult> Handle(CadastroClienteCommand message, CancellationToken cancellationToken)
@@ -49,10 +52,10 @@ namespace LS.Application.Clientes.Commands
             {
                 return await PersistirDados(_clienteWriteRepository.UnitOfWork);
             }
-            catch
+            catch(Exception ex)
             {
-                _clienteWriteRepository.ApagarCliente(cliente);
                 AdicionarErro($"Não foi possivel fazer o cadastro do cliente {cliente.ObterNomeCompletoCliente()}.");
+                _logger.LogCritical(ex.Message, nameof(CadastroClienteCommand));
                 return ValidationResult;
             }
         }
@@ -125,7 +128,7 @@ namespace LS.Application.Clientes.Commands
             {
                 return await PersistirDados(_clienteWriteRepository.UnitOfWork);
             }
-            catch(Exception ex)
+            catch
             {
                 AdicionarErro($"Não foi possivel adicionar o endereco do {cliente.ObterNomeCompletoCliente()}");
                 return ValidationResult;

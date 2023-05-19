@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace LS.Domain.Interfaces
+namespace LS.Domain.Usuarios
 {
     public interface IUser
     {

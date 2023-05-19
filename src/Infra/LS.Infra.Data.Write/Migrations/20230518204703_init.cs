@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LS.Infra.Data.Write.Migrations
 {
-    public partial class Cliente : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,7 +18,10 @@ namespace LS.Infra.Data.Write.Migrations
                     Cpf = table.Column<string>(type: "varchar(11)", maxLength: 11, nullable: true),
                     Email = table.Column<string>(type: "varchar(254)", nullable: true),
                     Ativo = table.Column<bool>(nullable: false),
-                    DataCadastro = table.Column<DateTime>(nullable: false)
+                    DataCadastro = table.Column<DateTime>(nullable: false),
+                    Celular = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: true),
+                    Profissao = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
+                    Sexo = table.Column<string>(type: "varchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31402.337
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - WebApi", "1 - WebApi", "{67EF8701-FBD4-40C0-A2CF-964584C72B51}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{67EF8701-FBD4-40C0-A2CF-964584C72B51}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{3C4AFCEE-0433-47AB-8C33-36F53F193599}"
 EndProject
@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LS.Infra.Data.Read", "src\I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LS.Infra.CrossCutting.IoC", "src\Infra\LS.Infra.IoC\LS.Infra.CrossCutting.IoC.csproj", "{6949688D-3009-4DF8-9E89-B55E37508922}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LS.WebApi", "src\WebApi\LS.WebApi\LS.WebApi.csproj", "{D68BABE7-6FCA-4C41-BF3C-CB300FE0D763}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LS.Services.Api", "src\Services\LS.Services.Api\LS.Services.Api.csproj", "{D68BABE7-6FCA-4C41-BF3C-CB300FE0D763}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LS.Application", "src\Application\LS.Application\LS.Application.csproj", "{3F8CCE85-6E26-4BE4-A596-80F8B65F9C6A}"
 EndProject
@@ -35,7 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 -
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LS.Infra.CrossCutting.Identity", "src\Infra\LS.Infra.CrossCutting.Identity\LS.Infra.CrossCutting.Identity.csproj", "{FE49A82E-91B6-476E-ADFF-212CF861116B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LS.IntegrationTests", "test\LS.IntegrationTests\LS.IntegrationTests.csproj", "{0A32D1C1-81FB-494D-9571-AA9719A9B43D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LS.IntegrationTests", "test\LS.IntegrationTests\LS.IntegrationTests.csproj", "{0A32D1C1-81FB-494D-9571-AA9719A9B43D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

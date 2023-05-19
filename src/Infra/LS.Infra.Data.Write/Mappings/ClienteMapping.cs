@@ -3,7 +3,7 @@ using LS.Domain.Core.DomainObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Infra.Data.Write.Mappings
+namespace LS.Infra.Data.Write.Mappings
 {
     public class ClienteMapping : IEntityTypeConfiguration<Cliente>
     {

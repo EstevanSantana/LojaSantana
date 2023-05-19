@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace LS.WebApi.Configurations
+namespace LS.Services.Api.Configurations
 {
     public static class ApiConfig
     {
@@ -16,7 +16,7 @@ namespace LS.WebApi.Configurations
             services.AddCors(options =>
             {
                 options.AddPolicy("Development",
-                    builder =>builder
+                    builder => builder
                         .AllowAnyOrigin()
                         .AllowAnyMethod()
                         .AllowAnyHeader());
@@ -31,13 +31,13 @@ namespace LS.WebApi.Configurations
             {
                 app.UseCors("Development");
             }
-            
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthentication();
-            
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

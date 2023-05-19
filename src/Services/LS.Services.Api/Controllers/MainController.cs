@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LS.WebApi.Controllers
+namespace LS.Services.Api.Controllers
 {
     [ApiController]
     public abstract class MainController : Controller

@@ -1,7 +1,7 @@
 ﻿using LS.Domain.Core.Data;
-using LS.Infra.Data.Read.Interfaces;
 using System;
 using System.Threading.Tasks;
+using LS.Infra.Data.Read.Interface;
 
 namespace LS.Infra.Data.Read.UoW
 {

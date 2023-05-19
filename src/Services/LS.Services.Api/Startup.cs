@@ -1,6 +1,6 @@
-using LS.Infra.IoC;
-using LS.WebApi.Configurations;
-using LS.WebApi.Extensions;
+using LS.Infra.CrossCutting.IoC;
+using LS.Services.Api.Configurations;
+using LS.Services.Api.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace LS.WebApi
+namespace LS.Services.Api
 {
     public class Startup
     {
@@ -50,7 +50,7 @@ namespace LS.WebApi
             app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseSwaggerConfiguration();
-            
+
             app.UseApiConfiguration(env);
         }
     }

@@ -1,12 +1,12 @@
-﻿using Infra.Data.Write.Context;
+﻿using System;
+using System.Threading.Tasks;
 using LS.Domain.Clientes.Interfaces;
 using LS.Domain.Clientes.Models;
 using LS.Domain.Core.Data;
+using LS.Infra.Data.Write.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Threading.Tasks;
 
-namespace Infra.Data.Write.Repository
+namespace LS.Infra.Data.Write.Repository
 {
     public class ClienteWriteRepository : IClienteWriteRepository
     {

@@ -1,8 +1,8 @@
-﻿using LS.Application.Clientes.Commands;
-using System.Linq;
+﻿using System.Linq;
+using LS.Application.Clientes.Commands;
 using Xunit;
 
-namespace LS.UnitTests.Application.Commands.ClienteCommands
+namespace LS.UnitTests.Application.Clientes.Commands
 {
     public class ClienteCadastroCommandTest
     {

@@ -2,7 +2,7 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Conventions;
 
-namespace LS.WebApi.Configurations
+namespace LS.Services.Api.Configurations
 {
     public static class MongoDbConfig
     {
@@ -11,7 +11,7 @@ namespace LS.WebApi.Configurations
             ClienteMap.Configure();
 
             BsonDefaults.GuidRepresentation = GuidRepresentation.Standard;
-            
+
             var pack = new ConventionPack
             {
                 new IgnoreExtraElementsConvention(true),

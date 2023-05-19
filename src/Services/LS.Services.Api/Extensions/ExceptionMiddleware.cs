@@ -4,7 +4,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace LS.WebApi.Extensions
+namespace LS.Services.Api.Extensions
 {
     public class ExceptionMiddleware
     {
@@ -21,7 +21,7 @@ namespace LS.WebApi.Extensions
             {
                 await _next(httpContext);
             }
-            catch(DomainException domainException) 
+            catch (DomainException domainException)
             {
                 HandleDomainExceptionAsync(httpContext, domainException);
             }
@@ -32,7 +32,7 @@ namespace LS.WebApi.Extensions
         }
 
         private static void HandleExceptionAsync(HttpContext context, Exception exception)
-        {   
+        {
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 

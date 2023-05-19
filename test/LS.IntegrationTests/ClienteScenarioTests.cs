@@ -1,11 +1,10 @@
 ﻿using Bogus;
 using LS.Application.Clientes.Dtos;
 using LS.Domain.Clientes.Enum;
-using LS.Domain.Clientes.Models;
 using LS.IntegrationTests.Configurations;
 using LS.IntegrationTests.Models;
+using LS.Services.Api;
 using LS.UnitTests.Domain.Fixtures;
-using LS.WebApi;
 using System;
 using System.Threading.Tasks;
 using Xunit;

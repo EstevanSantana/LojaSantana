@@ -1,10 +1,10 @@
 ﻿using LS.Domain.Clientes.Interfaces;
 using LS.Domain.Clientes.Models;
-using LS.Infra.Data.Read.Interfaces;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using LS.Infra.Data.Read.Interface;
 
 namespace LS.Infra.Data.Read.Repository
 {

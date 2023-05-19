@@ -1,8 +1,8 @@
-﻿using MongoDB.Driver;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using MongoDB.Driver;
 
-namespace LS.Infra.Data.Read.Interfaces
+namespace LS.Infra.Data.Read.Interface
 {
     public interface IReadContext : IDisposable
     {

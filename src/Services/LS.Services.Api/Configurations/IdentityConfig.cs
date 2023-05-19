@@ -1,5 +1,5 @@
 ﻿using LS.Infra.CrossCutting.Identity;
-using LS.WebApi.Extensions;
+using LS.Services.Api.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace LS.WebApi.Configurations
+namespace LS.Services.Api.Configurations
 {
     public static partial class IdentityConfig
     {

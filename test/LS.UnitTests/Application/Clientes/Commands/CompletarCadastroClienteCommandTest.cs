@@ -1,10 +1,10 @@
-﻿using LS.Application.Clientes.Commands;
-using LS.Domain.Clientes.Enum;
-using System;
+﻿using System;
 using System.Linq;
+using LS.Application.Clientes.Commands;
+using LS.Domain.Clientes.Enum;
 using Xunit;
 
-namespace LS.UnitTests.Application.Commands.ClienteCommands
+namespace LS.UnitTests.Application.Clientes.Commands
 {
     public class CompletarCadastroClienteCommandTest
     {

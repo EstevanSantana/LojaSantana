@@ -1,22 +1,22 @@
 ﻿using FluentValidation.Results;
-using Infra.Data.Write.Context;
-using Infra.Data.Write.Repository;
 using LS.Application.Clientes.Commands;
 using LS.Application.Clientes.Events;
 using LS.Application.Clientes.Queries;
 using LS.Domain.Clientes.Interfaces;
 using LS.Domain.Core.Data;
 using LS.Domain.Core.Mediator;
-using LS.Domain.Interfaces;
+using LS.Domain.Usuarios;
 using LS.Infra.CrossCutting.Identity;
 using LS.Infra.Data.Read.Context;
-using LS.Infra.Data.Read.Interfaces;
+using LS.Infra.Data.Read.Interface;
 using LS.Infra.Data.Read.Repository;
 using LS.Infra.Data.Read.UoW;
+using LS.Infra.Data.Write.Context;
+using LS.Infra.Data.Write.Repository;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LS.Infra.IoC
+namespace LS.Infra.CrossCutting.IoC
 {
     public static class DependencyInjectionConfig
     {

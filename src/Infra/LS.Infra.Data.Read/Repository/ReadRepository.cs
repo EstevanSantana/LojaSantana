@@ -1,6 +1,6 @@
 ﻿using LS.Domain.Core.Data;
 using LS.Domain.Core.DomainObjects;
-using LS.Infra.Data.Read.Interfaces;
+using LS.Infra.Data.Read.Interface;
 using MongoDB.Driver;
 
 namespace LS.Infra.Data.Read.Repository
@@ -10,7 +10,7 @@ namespace LS.Infra.Data.Read.Repository
         protected readonly IReadContext Context;
         protected IMongoCollection<T> DbSet;
 
-        public ReadRepository(IReadContext context)
+        protected ReadRepository(IReadContext context)
         {
             Context = context;
             DbSet = Context.GetCollection<T>(typeof(T).Name);

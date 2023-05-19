@@ -1,9 +1,9 @@
 ﻿using LS.Application.Clientes.Dtos;
 using LS.IntegrationTests.Configurations;
 using LS.UnitTests.Domain.Fixtures;
-using LS.WebApi;
-using LS.WebApi.Dtos;
 using System.Threading.Tasks;
+using LS.Services.Api;
+using LS.Services.Api.Dtos;
 using Xunit;
 
 namespace LS.IntegrationTests

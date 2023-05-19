@@ -1,10 +1,10 @@
-﻿using Infra.Data.Write.Context;
-using LS.Infra.CrossCutting.Identity;
+﻿using LS.Infra.CrossCutting.Identity;
+using LS.Infra.Data.Write.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LS.WebApi.Configurations
+namespace LS.Services.Api.Configurations
 {
     public static class DatabaseConfig
     {

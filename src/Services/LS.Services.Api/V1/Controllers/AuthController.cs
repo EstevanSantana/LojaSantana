@@ -2,9 +2,9 @@
 using LS.Application.Clientes.Commands;
 using LS.Application.Clientes.Dtos;
 using LS.Domain.Core.Mediator;
-using LS.WebApi.Controllers;
-using LS.WebApi.Dtos;
-using LS.WebApi.Extensions;
+using LS.Services.Api.Controllers;
+using LS.Services.Api.Dtos;
+using LS.Services.Api.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -18,17 +18,17 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LS.WebApi.V1.Controllers
+namespace LS.Services.Api.V1.Controllers
 {
     [Route("api/v1/identidade")]
-    public class AuthController : MainController 
+    public class AuthController : MainController
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly AppSettings _appSettings;
         private readonly IMediatorHandler _mediatorHandler;
 
-        public AuthController(SignInManager<IdentityUser> signInManager, 
+        public AuthController(SignInManager<IdentityUser> signInManager,
             UserManager<IdentityUser> userManager,
             IOptions<AppSettings> appSettings,
             IMediatorHandler mediatorHandler)
@@ -58,8 +58,8 @@ namespace LS.WebApi.V1.Controllers
             if (result.Succeeded)
             {
                 var cliente = await CadastrarCliente(usuario);
-                
-                if(!cliente.IsValid)
+
+                if (!cliente.IsValid)
                 {
                     await _userManager.DeleteAsync(user);
                     return CustomResponse(cliente);
@@ -107,7 +107,7 @@ namespace LS.WebApi.V1.Controllers
                 return await _mediatorHandler.EnviarComando(
                     new CadastroClienteCommand(
                         usuario.Nome,
-                        usuario.Sobrenome, 
+                        usuario.Sobrenome,
                         usuario.Cpf,
                         usuario.Email));
             }

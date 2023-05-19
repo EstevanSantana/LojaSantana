@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+
+  api:
+    image: mcr.microsoft.com/dotnet/aspnet:6.0-latest
+    build:
+      context: ../src
+      dockerfile: ./Services/LS.Services.Api/Dockerfile
+    ports: 
+      - "5001:5001"
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://*:5001
+      - CUSTOMCONNSTR_DefaultConnection="Server=(localdb)\\mssqllocaldb;Database=LojaSantana;MultipleActiveResultSets=true;User Id=sa;Password=MyDB@123"
+      - LC_ALL=en_US.UTF-8
+      - LANG=en_US.UTF-8
+    depends_on:
+      - database
+      - mongo
+
+  database:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    ports:
+      - 1433:1433
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data/db:/data/db

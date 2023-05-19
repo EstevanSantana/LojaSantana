@@ -1,15 +1,15 @@
-﻿using FluentValidation.Results;
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
+using FluentValidation.Results;
 using LS.Domain.Clientes.Models;
 using LS.Domain.Core.Data;
 using LS.Domain.Core.DomainObjects;
 using LS.Domain.Core.Mediator;
 using LS.Domain.Core.Messages;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Infra.Data.Write.Context
+namespace LS.Infra.Data.Write.Context
 {
     public class WriteContext : DbContext, IUnitOfWork
     {

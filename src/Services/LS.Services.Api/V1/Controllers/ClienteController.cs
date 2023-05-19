@@ -2,14 +2,14 @@
 using LS.Application.Clientes.Dtos;
 using LS.Application.Clientes.Queries;
 using LS.Domain.Core.Mediator;
-using LS.WebApi.Controllers;
+using LS.Services.Api.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace LS.WebApi.V1.Controllers
+namespace LS.Services.Api.V1.Controllers
 {
     [Authorize]
     [Route("api/v1/cliente")]
@@ -27,7 +27,7 @@ namespace LS.WebApi.V1.Controllers
         [HttpGet("{clienteId:guid}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> ObterPorId(Guid clienteId)
+        public async Task<IActionResult> ObterPorId([FromRoute] Guid clienteId)
         {
             if (Guid.Empty == clienteId) return NotFound();
 
@@ -49,7 +49,7 @@ namespace LS.WebApi.V1.Controllers
                                         clienteDto.Profissao,
                                         clienteDto.Sexo)));
         }
-    
+
         [HttpPost("adicionar-endereco")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]

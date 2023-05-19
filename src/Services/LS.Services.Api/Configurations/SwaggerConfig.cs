@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using System.Threading.Tasks;
 
-namespace LS.WebApi.Configurations
+namespace LS.Services.Api.Configurations
 {
     public static class SwaggerConfig
     {

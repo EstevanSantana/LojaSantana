@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace LS.WebApi.Dtos
+namespace LS.Services.Api.Dtos
 {
     public class UsuarioLoginDto
     {

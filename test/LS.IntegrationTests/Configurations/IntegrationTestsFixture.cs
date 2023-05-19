@@ -1,7 +1,7 @@
 ﻿using Bogus;
 using LS.IntegrationTests.Models;
-using LS.WebApi;
-using LS.WebApi.Dtos;
+using LS.Services.Api;
+using LS.Services.Api.Dtos;
 using Microsoft.AspNetCore.Mvc.Testing;
 using System;
 using System.Net.Http;
